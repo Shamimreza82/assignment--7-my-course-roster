@@ -10,9 +10,14 @@ const Cards = () => {
       .then((data) => setCardDatalode(data));
   }, []);
 
+
+  const handleSelect =() => {
+
+  }
+
   return (
-    <div className="flex lg:w-[90%] m-auto">
-      <div className="grid grid-cols-3 gap-4">
+    <div className="flex lg:w-[90%] m-auto flex-col lg:flex-row">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-4 ">
       {
         cardDataLoad.map(courses => (
             <div key={courses.id} className="card card-compact bg-base-100 shadow-xl">
@@ -30,14 +35,14 @@ const Cards = () => {
             <span className="text-base font-bold">Creadit:{courses.credit}hr</span>
           </div>
           <div className="card-actions justify-center">
-            <button className="btn bg-[#2F80ED] text-white w-full hover:text-[#2F80ED]">Select</button>
+            <button onClick={()=>handleSelect(courses)} className="btn bg-[#2F80ED] text-white w-full hover:text-[#2F80ED]">Select</button>
           </div>
         </div>
       </div>
         ))
       }
       </div>
-      <div className="lg:w-1/4">
+      <div className="lg:w-2/5 text-center bg-white ml-4 rounded-2xl shadow-md">
         <Cart></Cart>
       </div>
     </div>
