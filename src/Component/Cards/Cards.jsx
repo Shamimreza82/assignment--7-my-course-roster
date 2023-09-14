@@ -4,6 +4,7 @@ import Cart from "../Cart/Cart";
 
 const Cards = () => {
   const [cardDataLoad, setCardDatalode] = useState([]);
+  const [titleData, setTitleData] = useState ([])
   useEffect(() => {
     fetch("data.json")
       .then((rsc) => rsc.json())
@@ -11,7 +12,10 @@ const Cards = () => {
   }, []);
 
 
-  const handleSelect =() => {
+  const handleSelect =(courses) => {
+
+
+    setTitleData ([...titleData, courses])
 
   }
 
@@ -42,8 +46,8 @@ const Cards = () => {
         ))
       }
       </div>
-      <div className="lg:w-2/5 text-center bg-white ml-4 rounded-2xl shadow-md">
-        <Cart></Cart>
+      <div className="lg:w-2/5 bg-white ml-4 rounded-2xl shadow-md">
+        <Cart titleData ={titleData}></Cart>
       </div>
     </div>
   );
