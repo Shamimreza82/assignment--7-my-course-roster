@@ -1,0 +1,74 @@
+[
+    {
+        "id": "WEB001",
+        "title": "Web Development Fundamentals",
+        "short_description": "Learn the basics of web development, including HTML, CSS, and JavaScript.",
+        "price": 550,
+        "credit": 3,
+        "image": "https://i.ibb.co/j4FVYgV/Web-Development-Fundamentals-1.jpg"
+    },
+    {
+        "id": "WEB002",
+        "title": "JavaScript Programming",
+        "short_description": "Master JavaScript programming for dynamic web applications.",
+        "price": 600,
+        "credit": 3,
+        "image": "https://i.ibb.co/94n5tTN/Java-Script-Programming-1.jpg"
+    },
+    {
+        "id": "WEB003",
+        "title": "Backend Development with Node.js",
+        "short_description": "Build server-side applications using Node.js and Express.",
+        "price": 650,
+        "credit": 4,
+        "image": "https://i.ibb.co/fDR1F29/Backend-Development-with-Node.jpg"
+    },
+    {
+        "id": "WEB004",
+        "title": "Frontend Frameworks: React",
+        "short_description": "Learn React to create interactive and dynamic user interfaces.",
+        "price": 580,
+        "credit": 3,
+        "image": "https://i.ibb.co/q5tm8vp/React-1.jpg"
+    },
+    {
+        "id": "WEB005",
+        "title": "Web Security and Authentication",
+        "short_description": "Explore security practices and implement authentication in web applications.",
+        "price": 520,
+        "credit": 3,
+        "image": "https://i.ibb.co/5rF5WHJ/Web-Security-and-Authentication-1.jpg"
+    },
+    {
+        "id": "WEB006",
+        "title": "Database Management for Web Apps",
+        "short_description": "Learn database design and management for web applications.",
+        "price": 600,
+        "credit": 4,
+        "image": "https://i.ibb.co/Ks8JKzQ/Database-Management-for-Web-Apps-1.jpg"
+    },
+    {
+        "id": "WEB007",
+        "title": "Web Development Project Management",
+        "short_description": "Manage web development projects effectively from start to finish.",
+        "price": 580,
+        "credit": 3,
+        "image": "https://i.ibb.co/j8XpH5H/Web-Development-Project-Management-1.jpg"
+    },
+    {
+        "id": "WEB008",
+        "title": "Web Accessibility and Inclusive Design",
+        "short_description": "Learn to create web experiences accessible to all users.",
+        "price": 540,
+        "credit": 3,
+        "image": "https://i.ibb.co/H2DP5P6/Web-Accessibility-and-Inclusive-Design-1.jpg"
+    },
+    {
+        "id": "WEB009",
+        "title": "Progressive Web App Development",
+        "short_description": "Build progressive web apps (PWAs) for enhanced user experiences.",
+        "price": 620,
+        "credit": 4,
+        "image": "https://i.ibb.co/bsvGDGQ/Progressive-Web-App-Development-1.jpg"
+    }
+]
