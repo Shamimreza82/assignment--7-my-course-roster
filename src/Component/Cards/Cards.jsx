@@ -11,20 +11,24 @@ const Cards = () => {
   }, []);
 
   return (
-    <div className="flex ">
-      <div className="grid grid-cols-3">
+    <div className="flex lg:w-[90%] m-auto">
+      <div className="grid grid-cols-3 gap-4">
       {
         cardDataLoad.map(courses => (
-            <div key={courses.id} className="card card-compact w-96 bg-base-100 shadow-xl">
+            <div key={courses.id} className="card card-compact bg-base-100 shadow-xl">
         <figure>
-          <img
-            src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+          <img className="w-full lg:p-4 rounded-md"
+            src={courses.image}
             alt="Shoes"
           />
         </figure>
         <div className="card-body">
-          <h2 className="card-title">Shoes!</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
+          <h2 className="card-title text-lg">{courses.title}</h2>
+          <p>{courses.short_description}</p>
+          <div className="flex justify-between">
+            <span className="text-base font-bold">$ Price: {courses.price}</span>
+            <span className="text-base font-bold">Creadit:{courses.credit}hr</span>
+          </div>
           <div className="card-actions justify-center">
             <button className="btn bg-[#2F80ED] text-white w-full hover:text-[#2F80ED]">Select</button>
           </div>
@@ -33,7 +37,7 @@ const Cards = () => {
         ))
       }
       </div>
-      <div className="">
+      <div className="lg:w-1/4">
         <Cart></Cart>
       </div>
     </div>
