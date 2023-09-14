@@ -5,6 +5,9 @@ import Cart from "../Cart/Cart";
 const Cards = () => {
   const [cardDataLoad, setCardDatalode] = useState([]);
   const [titleData, setTitleData] = useState ([])
+  const[totalPrice, setTotalPrice] = useState (0)
+
+
   useEffect(() => {
     fetch("data.json")
       .then((rsc) => rsc.json())
@@ -13,11 +16,20 @@ const Cards = () => {
 
 
   const handleSelect =(courses) => {
+    let count = courses.price
+    titleData.forEach(countItem => {
+      count = count + countItem.price
+    })
+  
 
 
+    setTotalPrice(count);
     setTitleData ([...titleData, courses])
-
   }
+
+
+
+
 
   return (
     <div className="flex lg:w-[90%] m-auto flex-col lg:flex-row">
@@ -47,7 +59,10 @@ const Cards = () => {
       }
       </div>
       <div className="lg:w-2/5 bg-white ml-4 rounded-2xl shadow-md">
-        <Cart titleData ={titleData}></Cart>
+        <Cart 
+        titleData ={titleData}
+        totalPrice ={totalPrice}
+        ></Cart>
       </div>
     </div>
   );
