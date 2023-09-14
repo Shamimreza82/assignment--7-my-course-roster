@@ -6,9 +6,10 @@ import { ToastContainer, toast } from 'react-toastify';
 
 const Cards = () => {
   const [cardDataLoad, setCardDatalode] = useState([]);
-  const [titleData, setTitleData] = useState ([])
-  const[totalPrice, setTotalPrice] = useState (0)
-  const [creaditCount, setcreaditCount] = useState(0)
+  const [titleData, setTitleData] = useState ([]);
+  const [totalPrice, setTotalPrice] = useState (0);
+  const [creaditCount, setcreaditCount] = useState(0);
+  const [creditHourRemaining, setCreditHourRemaining] = useState(0);
 
 
   useEffect(() => {
@@ -32,8 +33,15 @@ const Cards = () => {
     titleData.forEach(countItem => {
       count = count + countItem.price
     })
- 
 
+    let remaining = 20; 
+    const HourRemaining = remaining - creaditCount; 
+
+    if (HourRemaining < 0) {
+      return toast ("count Cloge")
+    }
+
+    setCreditHourRemaining (HourRemaining)
     setcreaditCount (creaditCount)
     setTotalPrice(count);
     setTitleData ([...titleData, courses])
@@ -76,6 +84,7 @@ const Cards = () => {
         titleData ={titleData}
         totalPrice ={totalPrice}
         creaditCount = {creaditCount}
+        creditHourRemaining = {creditHourRemaining}
         ></Cart>
       </div>
     </div>

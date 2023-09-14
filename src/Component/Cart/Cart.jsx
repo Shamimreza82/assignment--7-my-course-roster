@@ -1,9 +1,9 @@
-const Cart = ({titleData ,totalPrice, creaditCount}) => {
+const Cart = ({titleData ,totalPrice, creaditCount, creditHourRemaining}) => {
     console.log (titleData)
     return (
         <div className="px-2">
              <div className="flex justify-center">
-             <h1 className="mt-4 pb-4 text-[#2F80ED] font-bold ">Credit Hour Remaining 7 hr</h1>
+             <h1 className="mt-4 pb-4 text-[#2F80ED] font-bold ">Credit Hour Remaining {creditHourRemaining} hr</h1>
              </div>
              <hr />
              <h3 className="text-xl font-bold mt-2">Course Name</h3>
