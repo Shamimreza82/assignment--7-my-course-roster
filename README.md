@@ -1,18 +1,18 @@
 
 
-## Project features: 
+** Project features: 
 
- * Using tailwind CSS for responsiveness and creating beautiful UI.   
- * Calculate Credit hour remaining and calculate Total Credit Hour. 
- * Show the titel in Cart Section. 
+ * Responsive design and a beautiful interface created using Tailwind CSS.  
+ * Calculate the Credit hour remaining and calculate the Total Credit Hour and show UI. 
+ * Show the all details in the Cart component. 
  
 
 
 ## State managment:
-** Total five states are used to do this project. 
+** Five states have been managed to complete this project.
 
-1. The data is phased from the json file using the first state. 
-2. handelselect button added and store data from Json file. 
-3. using count total price and store value. 
+1. Data is fetched from the JSON file and stored value this state.    
+2. handelselect button added and stored data from the JSON file. 
+3. Using count total price and store value. 
 4. Using this state for Total Credit hour value store. 
-5. Last state is using for Credit Hour Remaining valu store. 
+5. The last state is used for the Credit Hour Remaining value store. 
