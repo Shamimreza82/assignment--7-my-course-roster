@@ -1,4 +1,4 @@
-const Cart = ({titleData ,totalPrice}) => {
+const Cart = ({titleData ,totalPrice, creaditCount}) => {
     console.log (titleData)
     return (
         <div className="px-2">
@@ -12,7 +12,7 @@ const Cart = ({titleData ,totalPrice}) => {
                 }
                 <br />
                 <hr />
-            <h4 className="py-3 font-bold">Total Credit Hour: </h4>
+            <h4 className="py-3 font-bold">Total Credit Hour: {creaditCount} </h4>
             <hr />
             <h5 className="mt-3 font-bold"> Total Price: {totalPrice} USD</h5>
         </div>

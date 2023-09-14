@@ -1,11 +1,14 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import Cart from "../Cart/Cart";
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 const Cards = () => {
   const [cardDataLoad, setCardDatalode] = useState([]);
   const [titleData, setTitleData] = useState ([])
   const[totalPrice, setTotalPrice] = useState (0)
+  const [creaditCount, setcreaditCount] = useState(0)
 
 
   useEffect(() => {
@@ -16,13 +19,22 @@ const Cards = () => {
 
 
   const handleSelect =(courses) => {
+
+    const nameFind =  titleData.find(nameFine => nameFine.title == courses.title); 
+    if (nameFind) {
+     return toast ("Already selected")
+    }
+
+    let creaditCount = courses.credit;
+    titleData.forEach(countCreadit => {creaditCount = creaditCount + countCreadit.credit } )
+
     let count = courses.price
     titleData.forEach(countItem => {
       count = count + countItem.price
     })
-  
+ 
 
-
+    setcreaditCount (creaditCount)
     setTotalPrice(count);
     setTitleData ([...titleData, courses])
   }
@@ -52,6 +64,7 @@ const Cards = () => {
           </div>
           <div className="card-actions justify-center">
             <button onClick={()=>handleSelect(courses)} className="btn bg-[#2F80ED] text-white w-full hover:text-[#2F80ED]">Select</button>
+            <ToastContainer></ToastContainer>
           </div>
         </div>
       </div>
@@ -62,6 +75,7 @@ const Cards = () => {
         <Cart 
         titleData ={titleData}
         totalPrice ={totalPrice}
+        creaditCount = {creaditCount}
         ></Cart>
       </div>
     </div>
