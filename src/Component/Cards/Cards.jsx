@@ -38,7 +38,7 @@ const Cards = () => {
     const HourRemaining = remaining - creaditCount; 
 
     if (HourRemaining < 0) {
-      return toast (" Your Credit Hour Remaining is Low")
+      return toast ("You have run out of credit hours.")
     }
 
     setCreditHourRemaining (HourRemaining)
@@ -52,7 +52,7 @@ const Cards = () => {
 
 
   return (
-    <div className="flex lg:w-[90%] m-auto flex-col lg:flex-row">
+    <div className="flex lg:w-[90%] m-auto flex-col-reverse lg:flex-row pb-4">
       <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-4 ">
       {
         cardDataLoad.map(courses => (
@@ -67,8 +67,8 @@ const Cards = () => {
           <h2 className="card-title text-lg">{courses.title}</h2>
           <p>{courses.short_description}</p>
           <div className="flex justify-between">
-            <span className="text-base font-bold">$ Price: {courses.price}</span>
-            <span className="text-base font-bold">Creadit:{courses.credit}hr</span>
+            <span className="text-base font-bold text-gray-500">$ Price : {courses.price}</span>
+            <span className="text-base font-bold text-gray-500">Credit : {courses.credit} hr</span>
           </div>
           <div className="card-actions justify-center">
             <button onClick={()=>handleSelect(courses)} className="btn bg-[#2F80ED] text-white w-full hover:text-[#2F80ED]">Select</button>
@@ -79,7 +79,7 @@ const Cards = () => {
         ))
       }
       </div>
-      <div className="lg:w-2/5 bg-white ml-4 rounded-2xl shadow-md">
+      <div className="lg:w-2/5 lg:ml-4 mb-5">
         <Cart 
         titleData ={titleData}
         totalPrice ={totalPrice}

@@ -2,7 +2,7 @@ const Cart = ({titleData ,totalPrice, creaditCount, creditHourRemaining}) => {
     console.log (titleData)
     let count = 1;
     return (
-        <div className="px-2">
+        <div className="px-2 bg-white py-3 rounded-2xl shadow-md ">
              <div className="flex justify-center">
              <h1 className="mt-4 pb-4 text-[#2F80ED] font-bold ">Credit Hour Remaining {creditHourRemaining} hr</h1>
              </div>
