@@ -53,7 +53,7 @@ const Cards = () => {
 
   return (
     <div className="flex lg:w-[90%] m-auto flex-col-reverse lg:flex-row pb-4">
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-4 ">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-4">
       {
         cardDataLoad.map(courses => (
             <div key={courses.id} className="card card-compact bg-base-100 shadow-xl">

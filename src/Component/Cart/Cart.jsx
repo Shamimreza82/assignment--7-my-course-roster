@@ -9,7 +9,7 @@ const Cart = ({titleData ,totalPrice, creaditCount, creditHourRemaining}) => {
              <hr />
              <h3 className="text-xl font-bold mt-2">Course Name</h3>
                 {
-                    titleData.map(title => <p className="bg-slate-100 mt-2 px-3 rounded-md text-sm">{count++}. {title.title}</p>)
+                    titleData.map(title => <p className="bg-slate-100 mt-2 px-3 py-2 rounded-md text-sm">{count++}. {title.title}</p>)
                 }
                 <br />
                 <hr />
