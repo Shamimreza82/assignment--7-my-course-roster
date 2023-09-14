@@ -1,5 +1,6 @@
 const Cart = ({titleData ,totalPrice, creaditCount, creditHourRemaining}) => {
     console.log (titleData)
+    let count = 1;
     return (
         <div className="px-2">
              <div className="flex justify-center">
@@ -8,7 +9,7 @@ const Cart = ({titleData ,totalPrice, creaditCount, creditHourRemaining}) => {
              <hr />
              <h3 className="text-xl font-bold mt-2">Course Name</h3>
                 {
-                    titleData.map(title => <p className="bg-slate-100 mt-2 px-3 rounded-md text-sm">{title.title}</p>)
+                    titleData.map(title => <p className="bg-slate-100 mt-2 px-3 rounded-md text-sm">{count++}. {title.title}</p>)
                 }
                 <br />
                 <hr />

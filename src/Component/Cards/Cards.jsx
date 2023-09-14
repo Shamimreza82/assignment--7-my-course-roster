@@ -9,7 +9,7 @@ const Cards = () => {
   const [titleData, setTitleData] = useState ([]);
   const [totalPrice, setTotalPrice] = useState (0);
   const [creaditCount, setcreaditCount] = useState(0);
-  const [creditHourRemaining, setCreditHourRemaining] = useState(0);
+  const [creditHourRemaining, setCreditHourRemaining] = useState(20);
 
 
   useEffect(() => {
@@ -38,7 +38,7 @@ const Cards = () => {
     const HourRemaining = remaining - creaditCount; 
 
     if (HourRemaining < 0) {
-      return toast ("count Cloge")
+      return toast (" Your Credit Hour Remaining is Low")
     }
 
     setCreditHourRemaining (HourRemaining)
