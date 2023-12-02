@@ -2,6 +2,8 @@
 
 ## Project features: 
 
+Live Link: https://miscreant-snails-course-registration.surge.sh/
+
  * Responsive design and a beautiful interface created using Tailwind CSS.  
  * In this project, full data is dynamically using JSON files.
  * There are total 9 cards and on each card there is a button which on clicking will select that course and calculate the cost of the       course, how many hours are available and how many hours have been used.
